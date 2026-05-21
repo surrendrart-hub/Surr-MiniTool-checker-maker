@@ -1,0 +1,237 @@
+
+/*
+* leCheckerMakerMaison v1.0
+* https://www.surrendr.studio
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣶⣦⡄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣀⣀⣀⡀⢀⠀⢹⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠙⠻⣿⣿⣷⣄⠨⣿⣿⣿⡌⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣷⣿⣿⣿⣿⣿⣶⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⣴⣾⣿⣮⣝⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠉⠙⠻⢿⣿⣿⣿⣿⣿⣿⠟⣹⣿⡿⢿⣿⣿⣬⣶⣶⡶⠦⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣀⣢⣙⣻⢿⣿⣿⣿⠎⢸⣿⠕⢹⣿⣿⡿⣛⣥⣀⣀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠉⠛⠿⡏⣿⡏⠿⢄⣜⣡⠞⠛⡽⣸⡿⣟⡋⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠾⠿⣿⠁⠀⡄⠀⠀⠰⠾⠿⠛⠓⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠠⢐⢉⢷⣀⠛⠠⠐⠐⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⣠⣴⣶⣿⣧⣾⠡⠼⠎⢎⣋⡄⠆⠀⠱⡄⢉⠃⣦⡤⡀⠀⠀⠀⠀
+⠀⠀⠐⠙⠻⢿⣿⣿⣿⣿⣿⣿⣄⡀⠀⢩⠀⢀⠠⠂⢀⡌⠀⣿⡇⠟⠀⠀⢄⠀
+⠀⣴⣇⠀⡇⠀⠸⣿⣿⣿⣿⣽⣟⣲⡤⠀⣀⣠⣴⡾⠟⠀⠀⠟⠀⠀⠀⠀⡰⡀
+⣼⣿⠋⢀⣇⢸⡄⢻⣟⠻⣿⣿⣿⣿⣿⣿⠿⡿⠟⢁⠀⠀⠀⠀⠀⢰⠀⣠⠀⠰
+⢸⣿⡣⣜⣿⣼⣿⣄⠻⡄⡀⠉⠛⠿⠿⠛⣉⡤⠖⣡⣶⠁⠀⠀⠀⣾⣶⣿⠐⡀
+⣾⡇⠈⠛⠛⠿⣿⣿⣦⠁SURRENDR.STUDIO⠃⠀⠀⠀⠰⠛⠉⠉⠀⠀
+*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400; /* 400 = Regular */
+  src: url('../fonts/open-sans-regular.woff2') format('woff2'), /* Mettez à jour ce nom de fichier */
+       url('../fonts/open-sans-regular.woff') format('woff'); /* Mettez à jour ce nom de fichier */
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700; /* 700 = Bold */
+  src: url('../fonts/open-sans-bold.woff2') format('woff2'), /* Mettez à jour ce nom de fichier */
+       url('../fonts/open-sans-bold.woff') format('woff'); /* Mettez à jour ce nom de fichier */
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #151515;
+    color: #d9d9d9;
+    
+    /* MODIFIÉ : Taille de police et interligne réduits */
+    font-size: 13px;
+    line-height: 1.3;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    scrollbar-color: #545454 #181818;
+    scrollbar-width: auto;
+}
+
+.site-logo-link {
+    display: block;
+    margin-bottom: 20px; 
+}
+
+.site-logo-link img {
+    width: 100%; 
+    height: auto;
+    border-radius: 4px; 
+    display: block; 
+}
+
+.controls {
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    align-self: start;
+    overflow-y: auto;
+}
+
+.controls::-webkit-scrollbar {
+    width: 12px;
+}
+.controls::-webkit-scrollbar-track {
+    background: #181818;
+    border-radius: 8px;
+}
+.controls::-webkit-scrollbar-thumb {
+    background-color: #545454;
+    border-radius: 6px;
+    border: 3px solid #181818; 
+}
+.controls::-webkit-scrollbar-button {
+    background-color: #545454;
+}
+
+.controls h2, .controls h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 15px; 
+}
+
+.control-group { margin-bottom: 15px; }
+.control-group label { display: block; font-weight: 600; margin-bottom: 6px; } 
+
+.control-group input[type="color"] { 
+    width: 100%; 
+    height: 40px; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+    outline: none; 
+    background: transparent;
+}
+.control-group input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+.control-group input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+
+/* Style des champs de saisie pour le dark mode */
+.control-group input[type="text"],
+.slider-input-group input[type="number"],
+.control-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #d9d9d9;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 13px; /* MODIFIÉ */
+}
+
+.checkbox-group { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; }
+.checkbox-group label { margin-bottom: 0; font-weight: bold; }
+
+.color-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+#invert-colors {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #d9d9d9;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 13px; /* MODIFIÉ */
+}
+#invert-colors:hover {
+    background-color: #444;
+}
+
+.slider-input-group {
+    display: grid;
+    grid-template-columns: 1fr 60px;
+    gap: 10px;
+    align-items: center;
+}
+.slider-input-group input[type="range"] { margin-top: 0; }
+
+.hidden { display: none; }
+
+/* --- COLONNE DE DROITE --- */
+.preview-area {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 25px;
+    align-self: start;
+}
+
+#preview-canvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; 
+    background-image: repeating-conic-gradient(#333 0% 25%, #2a2a2a 25% 50%);
+    background-size: 20px 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.download-section { 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-top: 20px; 
+    align-items: center; 
+}
+.download-section select {
+    font-size: 13px; /* MODIFIÉ */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #d9d9d9;
+    border: 1px solid #555;
+}
+
+.download-section button {
+    font-size: 13px; /* MODIFIÉ */
+    font-weight: 600;
+    padding: 11px 20px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.download-section button:hover { background-color: #0056b3; }
+
+.upload-btn {
+    font-size: 13px; /* MODIFIÉ */
+    background-color: #007aff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.upload-btn:hover { background-color: #0056b3; }
+input[type="file"] { display: none; }
+
+
+@media (min-width: 1000px) {
+    body {
+        grid-template-columns: 350px 1fr;
+        padding: 40px;
+    }
+    
+    .controls {
+        max-height: 90vh;
+    }
+}

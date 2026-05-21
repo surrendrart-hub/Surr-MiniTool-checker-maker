@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker Maker</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="controls">
+
+        <a href="https://www.surrndr.art" target="_blank" rel="noopener noreferrer" class="site-logo-link">
+            <img src="images/avatar_surrendr.png" alt="Surrendr Studio Logo"> 
+        </a>
+
+        <h2>Checker Maker V1.0</h2>
+
+        <h3>Background</h3>
+        <div class="checkbox-group">
+            <input type="checkbox" id="transparent-bg" checked>
+            <label for="transparent-bg">Transparent Background (PNG Alpha)</label>
+        </div>
+        <div id="bg-color-wrapper" class="control-group hidden">
+            <label for="background-color">Background Color:</label>
+            <input type="color" id="background-color" value="#f0f0f0">
+        </div>
+
+        <h3>Square Colors</h3>
+        <div class="color-controls">
+            <div class="control-group">
+                <label for="color1">Color 1:</label>
+                <input type="color" id="color1" value="#aaaaaa">
+            </div>
+            <div class="control-group">
+                <label for="color2">Color 2:</label>
+                <input type="color" id="color2" value="#ffffff">
+            </div>
+        </div>
+        <button id="invert-colors">Invert Colors</button>
+
+        <h3>Grid & Transform</h3>
+        <div class="control-group">
+            <label for="tiling">Tiling (Zoom): <span id="tiling-value">4</span>x4</label>
+            <div class="slider-input-group">
+                <input type="range" id="tiling" min="2" max="64" value="4" step="2">
+                <input type="number" id="tiling-num" min="2" value="4" step="2">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="angle">Grid Rotation: <span id="angle-value">0</span>°</label>
+            <input type="range" id="angle" min="0" max="90" value="0" step="1">
+        </div>
+        <div class="control-group">
+            <label for="offsetX">Offset X: <span id="offsetX-value">0</span>%</label>
+            <input type="range" id="offsetX" min="0" max="100" value="0" step="1">
+        </div>
+        <div class="control-group">
+            <label for="offsetY">Offset Y: <span id="offsetY-value">0</span>%</label>
+            <input type="range" id="offsetY" min="0" max="100" value="0" step="1">
+        </div>
+        <div class="control-group">
+            <label for="roundness">Corner Roundness: <span id="roundness-value">0</span>%</label>
+            <input type="range" id="roundness" min="0" max="100" value="0" step="1">
+        </div>
+        <div class="control-group">
+            <label for="border-color">Border Color:</label>
+            <input type="color" id="border-color" value="#000000">
+        </div>
+        <div class="control-group">
+            <label for="border-thickness">Border Thickness: <span id="border-thickness-value">0</span>%</label>
+            <div class="slider-input-group">
+                <input type="range" id="border-thickness" min="0" max="20" value="0" step="1">
+                <input type="number" id="border-thickness-num" min="0" max="20" value="0" step="1">
+            </div>
+        </div>
+
+        <h3>Text</h3>
+        <div class="checkbox-group">
+            <input type="checkbox" id="enable-text" checked>
+            <label for="enable-text">Enable Text</label>
+        </div>
+
+        <div id="text-controls-wrapper">
+            <div class="control-group">
+                <label for="font-family">Font</label>
+                <select id="font-family">
+                    <option value="'Open Sans', sans-serif">Open Sans</option>
+                    <option value="Arial, sans-serif">Arial</option>
+                    <option value="'Courier New', monospace">Courier New</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="text-input">Text:</label>
+                <input type="text" id="text-input" value="A1">
+            </div>
+            <div class="control-group">
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" value="#000000">
+            </div>
+            <div class="control-group">
+                <label for="text-size">Text Size: <span id="text-size-value">50</span>%</label>
+                <div class="slider-input-group">
+                    <input type="range" id="text-size" min="10" max="100" value="50" step="1">
+                    <input type="number" id="text-size-num" min="10" max="100" value="50" step="1">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="text-offset-x">Text Offset X: <span id="text-offset-x-value">0</span>px</label>
+                <div class="slider-input-group">
+                    <input type="range" id="text-offset-x" min="-50" max="50" value="0" step="1">
+                    <input type="number" id="text-offset-x-num" min="-50" max="50" value="0" step="1">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="text-offset-y">Text Offset Y: <span id="text-offset-y-value">0</span>px</label>
+                <div class="slider-input-group">
+                    <input type="range" id="text-offset-y" min="-50" max="50" value="0" step="1">
+                    <input type="number" id="text-offset-y-num" min="-50" max="50" value="0" step="1">
+                </div>
+            </div>
+        </div> <h3>Watermark (Logo)</h3>
+        <div class="control-group">
+            <label for="logo-upload" class="upload-btn">Upload Logo</label>
+            <input type="file" id="logo-upload" accept="image/png, image/jpeg">
+        </div>
+        <div class="control-group">
+            <label for="logoSize">Logo Zoom: <span id="logoSize-value">70</span>%</label>
+            <div class="slider-input-group">
+                <input type="range" id="logoSize" min="1" max="500" value="70" step="1" disabled>
+                <input type="number" id="logoSize-num" min="1" value="70" step="1" disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-area">
+        <h2>Preview (Canvas Render)</h2>
+        <canvas id="preview-canvas"></canvas>
+
+        <h3>Download Image</h3>
+        <div class="download-section">
+            <select id="download-resolution">
+                <option value="512">512 x 512</option>
+                <option value="1024">1024 x 1024</option>
+                <option value="2048">2048 x 2048</option>
+                <option value="4096">4096 x 4096</option>
+            </select>
+            <button id="download-btn">Download PNG</button>
+        </div>
+    </div>
+
+
+    <script src="java/script.js"></script>
+    
+</body>
+</html>

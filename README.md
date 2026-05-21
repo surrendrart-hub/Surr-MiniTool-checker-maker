@@ -2,7 +2,7 @@
 
 > Un mini-outil web pour générer des damiers (checker patterns) personnalisés, exportables en PNG haute résolution.
 
-Fait partie de la collection **Surr Mini Tools** par [Surrendr Studio](https://www.surrendr.studio).
+Fait partie de la collection **Surr Mini Tools** par [Surrendr Studio](https://www.surrendr.art).
 
 ---
 
@@ -10,7 +10,6 @@ Fait partie de la collection **Surr Mini Tools** par [Surrendr Studio](https://w
 
 [**→ Tester le Checker Maker**](https://surrendrart-hub.github.io/Surr-MiniTool-checker-maker/)
 
-*(Activez GitHub Pages dans les paramètres du dépôt pour que ce lien fonctionne — voir [Déploiement](#déploiement).)*
 
 ---
 
@@ -99,7 +98,7 @@ Pour publier la démo en ligne :
 
 ## Auteur
 
-Fait avec soin par **[Surrendr Studio](https://www.surrendr.studio)**.
+Fait avec soin par **[Surrendr Studio](https://www.surrendr.art)**.
 
 ## Licence
 

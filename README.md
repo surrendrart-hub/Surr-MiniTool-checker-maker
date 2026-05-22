@@ -2,7 +2,7 @@
 
 > Un mini-outil web pour générer des damiers (checker patterns) personnalisés, exportables en PNG haute résolution.
 
-Fait partie de la collection **Surr Mini Tools** par [Surrendr Studio](https://www.surrendr.art).
+Fait partie de la collection **Surr Mini Tools** par [Surrendr art](https://www.surrendr.art).
 
 ---
 
@@ -98,7 +98,7 @@ Pour publier la démo en ligne :
 
 ## Auteur
 
-Fait avec soin par **[Surrendr Studio](https://www.surrendr.art)**.
+Fait avec soin par **[Surrendr art](https://www.surrendr.art)**.
 
 ## Licence
 
